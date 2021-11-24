@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		CEA504ED274EE3CF005BE8D3 /* ReduxCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA504EB274EE3CF005BE8D3 /* ReduxCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEA504FB274EE5EC005BE8D3 /* ReduxStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA504F6274EE5EC005BE8D3 /* ReduxStoreView.swift */; };
+		CEA504FC274EE5EC005BE8D3 /* ReduxAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA504F7274EE5EC005BE8D3 /* ReduxAction.swift */; };
+		CEA504FD274EE5EC005BE8D3 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA504F8274EE5EC005BE8D3 /* ReduxState.swift */; };
+		CEA504FE274EE5EC005BE8D3 /* ReduxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA504F9274EE5EC005BE8D3 /* ReduxStore.swift */; };
+		CEA504FF274EE5EC005BE8D3 /* ReduxReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA504FA274EE5EC005BE8D3 /* ReduxReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEA504E8274EE3CF005BE8D3 /* ReduxCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReduxCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA504EB274EE3CF005BE8D3 /* ReduxCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReduxCore.h; sourceTree = "<group>"; };
 		CEA504EC274EE3CF005BE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA504F4274EE5BF005BE8D3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		CEA504F5274EE5BF005BE8D3 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
+		CEA504F6274EE5EC005BE8D3 /* ReduxStoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduxStoreView.swift; sourceTree = "<group>"; };
+		CEA504F7274EE5EC005BE8D3 /* ReduxAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduxAction.swift; sourceTree = "<group>"; };
+		CEA504F8274EE5EC005BE8D3 /* ReduxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduxState.swift; sourceTree = "<group>"; };
+		CEA504F9274EE5EC005BE8D3 /* ReduxStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduxStore.swift; sourceTree = "<group>"; };
+		CEA504FA274EE5EC005BE8D3 /* ReduxReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduxReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +42,8 @@
 		CEA504DE274EE3CF005BE8D3 = {
 			isa = PBXGroup;
 			children = (
+				CEA504F5274EE5BF005BE8D3 /* Changelog.md */,
+				CEA504F4274EE5BF005BE8D3 /* Package.swift */,
 				CEA504EA274EE3CF005BE8D3 /* ReduxCore */,
 				CEA504E9274EE3CF005BE8D3 /* Products */,
 			);
@@ -46,6 +60,11 @@
 		CEA504EA274EE3CF005BE8D3 /* ReduxCore */ = {
 			isa = PBXGroup;
 			children = (
+				CEA504F7274EE5EC005BE8D3 /* ReduxAction.swift */,
+				CEA504FA274EE5EC005BE8D3 /* ReduxReducer.swift */,
+				CEA504F8274EE5EC005BE8D3 /* ReduxState.swift */,
+				CEA504F9274EE5EC005BE8D3 /* ReduxStore.swift */,
+				CEA504F6274EE5EC005BE8D3 /* ReduxStoreView.swift */,
 				CEA504EB274EE3CF005BE8D3 /* ReduxCore.h */,
 				CEA504EC274EE3CF005BE8D3 /* Info.plist */,
 			);
@@ -94,6 +113,7 @@
 				TargetAttributes = {
 					CEA504E7274EE3CF005BE8D3 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -130,6 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA504FE274EE5EC005BE8D3 /* ReduxStore.swift in Sources */,
+				CEA504FC274EE5EC005BE8D3 /* ReduxAction.swift in Sources */,
+				CEA504FF274EE5EC005BE8D3 /* ReduxReducer.swift in Sources */,
+				CEA504FD274EE5EC005BE8D3 /* ReduxState.swift in Sources */,
+				CEA504FB274EE5EC005BE8D3 /* ReduxStoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +286,7 @@
 		CEA504F1274EE3CF005BE8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.roneshender.dev.ReduxCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +311,7 @@
 		CEA504F2274EE3CF005BE8D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
