@@ -32,7 +32,7 @@ public protocol DispatcherObject: AnyObject {
     
 }
 
-public protocol ListenerObject: class {
+public protocol ListenerObject: AnyObject {
     
     var dispatcher: DispatcherObject? { get set }
     
@@ -53,6 +53,18 @@ public protocol MiddlewareListenerObject: ListenerObject {
     func handleDispatch(action: ReduxAction,
                         store: DispatcherObject,
                         parent: DispatcherObject?)
+    
+}
+
+public extension MiddlewareListenerObject {
+    
+    var subscriptions: Set<AnyCancellable> { Set<AnyCancellable>() }
+    
+    func handleDispatch(action: ReduxAction,
+                        store: DispatcherObject,
+                        parent: DispatcherObject?) {
+        return
+    }
     
 }
 
